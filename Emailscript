@@ -1,0 +1,9 @@
+$From = "juliankoster@yahoo.nl"
+$To = "juliankoster@yahoo.nl"
+$Cc = "juliankoster@yahoo.nl"
+$Attachment = "C:\Users\julian\\Documents\AAASCHOOL\PowerShell\Powershell scripts\PCInfo.ps1"
+$Subject = "Powershell"
+$Body = "test"
+$SMTPServer = "smtp.mail.yahoo.com"
+$SMTPPort = "465"
+Send-MailMessage -From $From -to $To -Cc $Cc -Subject $Subject -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl -Credential (Get-Credential) -Attachments $Attachment –DeliveryNotificationOption OnSuccess
